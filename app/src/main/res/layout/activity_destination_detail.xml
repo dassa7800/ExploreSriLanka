@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/gradient_overlay"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!-- Destination Image -->
+        <ImageView
+            android:id="@+id/destination_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop" />
+
+        <!-- Destination Name -->
+        <TextView
+            android:id="@+id/destination_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination Name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Destination Description -->
+        <TextView
+            android:id="@+id/destination_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination Description"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Distance from Airport -->
+        <TextView
+            android:id="@+id/destination_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance from Airport: "
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Nearby Hotels -->
+        <TextView
+            android:id="@+id/nearby_hotels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nearby Hotels: "
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Nearby Destinations -->
+        <TextView
+            android:id="@+id/nearby_destinations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nearby Destinations: "
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Category -->
+        <TextView
+            android:id="@+id/destination_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category: "
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+</ScrollView>

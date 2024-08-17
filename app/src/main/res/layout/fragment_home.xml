@@ -1,0 +1,124 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@drawable/gradient_background"> <!-- Added gradient background -->
+
+        <!-- Welcome Message -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#99FFFFFF"
+            android:padding="20dp"
+            android:elevation="2dp"
+            android:clipToOutline="true">
+
+            <TextView
+                android:id="@+id/home_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome!"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+        </LinearLayout>
+
+        <!-- Hype Text -->
+        <TextView
+            android:id="@+id/home_hype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Experience the beauty of Sri Lanka with personalized itineraries tailored just for you. Whether you seek adventure, relaxation, or cultural immersion, our system will help you make the most of your trip!"
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:textAlignment="center"
+            android:padding="16dp"
+            android:background="#99FFFFFF"
+            android:elevation="2dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Generate Itinerary Button -->
+        <Button
+            android:id="@+id/generate_itinerary_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate Itinerary"
+            android:textColor="#FFFFFF"
+            android:background="#6200EE"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- View Itinerary Button -->
+        <Button
+            android:id="@+id/view_itinerary_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Your Itinerary"
+            android:textColor="#252c33"
+            android:background="#03DAC5"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone"/>
+
+        <!-- Generated Itinerary Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:visibility="gone"
+            android:id="@+id/itinerary_scroll_view"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/generated_itinerary_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:lineSpacingMultiplier="1.2"/>
+        </LinearLayout>
+
+        <!-- Save and Regenerate Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/itinerary_buttons_layout">
+
+            <Button
+                android:id="@+id/save_itinerary_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Itinerary"
+                android:textColor="#FFFFFF"
+                android:background="#6200EE"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/regenerate_itinerary_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Regenerate Itinerary"
+                android:textColor="#FFFFFF"
+                android:background="#03DAC5"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

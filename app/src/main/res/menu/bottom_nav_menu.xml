@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_explore"
+        android:icon="@drawable/ic_explore"
+        android:title="Explore" />
+    <item
+        android:id="@+id/navigation_itineraries"
+        android:icon="@drawable/ic_itinerary"
+        android:title="Itineraries" />
+    <item
+        android:id="@+id/navigation_bookings"
+        android:icon="@drawable/ic_bookings"
+        android:title="Bookings" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile" />
+</menu>
