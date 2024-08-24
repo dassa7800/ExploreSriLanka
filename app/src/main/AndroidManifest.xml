@@ -44,6 +44,7 @@
         <!-- Home Activity -->
         <activity android:name=".HomeActivity" />
         <activity android:name=".DestinationDetailActivity" />
+        <activity android:name=".AdminActivity" />
 
         <!-- Main Activity -->
         <activity
