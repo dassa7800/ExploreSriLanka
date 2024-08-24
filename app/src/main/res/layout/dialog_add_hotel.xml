@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- Hotel Name Input -->
+    <EditText
+        android:id="@+id/hotel_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hotel Name"
+        android:inputType="text"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <!-- Hotel Description Input -->
+    <EditText
+        android:id="@+id/hotel_description_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hotel Description"
+        android:inputType="text"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <!-- Hotel Image URL Input -->
+    <EditText
+        android:id="@+id/hotel_image_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image URL"
+        android:inputType="textUri"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <!-- Hotel Rating Input -->
+    <EditText
+        android:id="@+id/hotel_rating_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rating (e.g., 4.5)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>

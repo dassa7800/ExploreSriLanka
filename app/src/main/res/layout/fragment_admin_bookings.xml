@@ -1,46 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/gradient_background"
     android:padding="16dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/bookings_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:text="Hotels in Sri Lanka"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
 
-        <!-- Title -->
-        <TextView
-            android:id="@+id/bookings_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Manage Bookings"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginBottom="24dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bookings_title"
+        android:fillViewport="true">
 
-        <!-- Example Content -->
-        <TextView
-            android:id="@+id/bookings_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View and manage all bookings made through the platform."
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Example Action Button -->
-        <Button
-            android:id="@+id/view_bookings_button"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View All Bookings"
-            android:background="@drawable/button_background"
-            android:textColor="@color/white"
-            android:layout_marginBottom="16dp"/>
+            android:orientation="vertical"
+            android:gravity="top">
 
-    </LinearLayout>
-</ScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hotel_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_hotel_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Add Hotel"
+        app:backgroundTint="#1287FB"
+        app:fabSize="normal" />
+
+</RelativeLayout>

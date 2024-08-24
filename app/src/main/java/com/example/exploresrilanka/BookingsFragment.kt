@@ -30,7 +30,7 @@ class BookingsFragment : Fragment() {
         recyclerView = view.findViewById(R.id.hotels_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(context)
         hotelsList = mutableListOf()
-        hotelAdapter = HotelAdapter(hotelsList)
+        hotelAdapter = HotelAdapter(hotelsList, false)
         recyclerView.adapter = hotelAdapter
 
         // Fetch data from Firestore
