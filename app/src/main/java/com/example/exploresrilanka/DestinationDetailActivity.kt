@@ -16,6 +16,7 @@ class DestinationDetailActivity : AppCompatActivity() {
         val destination = intent.getParcelableExtra<Destination>("destination")
 
         // Get references to UI elements
+        val backButton: ImageView = findViewById(R.id.back_button)
         val destinationImage: ImageView = findViewById(R.id.destination_image)
         val destinationName: TextView = findViewById(R.id.destination_name)
         val destinationDescription: TextView = findViewById(R.id.destination_description)
@@ -37,6 +38,11 @@ class DestinationDetailActivity : AppCompatActivity() {
             Glide.with(this)
                 .load(it.image)
                 .into(destinationImage)
+        }
+
+        // Back button click listener
+        backButton.setOnClickListener {
+            onBackPressed()
         }
     }
 }

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Destination Name Input -->
+        <EditText
+            android:id="@+id/destination_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Destination Name"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#80000000"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Destination Description Input -->
+        <EditText
+            android:id="@+id/destination_description_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#80000000"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Destination Image URL Input -->
+        <EditText
+            android:id="@+id/destination_image_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Image URL"
+            android:inputType="textUri"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#80000000"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Distance from Airport Input -->
+        <EditText
+            android:id="@+id/distance_from_airport_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Distance from Airport (e.g., 10km)"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#80000000"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Nearby Hotels Input -->
+        <EditText
+            android:id="@+id/nearby_hotels_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nearby Hotels"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#80000000"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Nearby Destinations Input -->
+        <EditText
+            android:id="@+id/nearby_destinations_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nearby Destinations"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#80000000"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Destination Category Selection Button -->
+        <Button
+            android:id="@+id/select_category_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Categories"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TextView to display selected categories -->
+        <TextView
+            android:id="@+id/selected_categories_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selected Categories: None"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

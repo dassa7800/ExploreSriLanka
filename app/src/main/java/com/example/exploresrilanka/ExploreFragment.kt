@@ -20,17 +20,15 @@ class ExploreFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_explore, container, false)
 
-        // Initialize Firestore
         firestore = FirebaseFirestore.getInstance()
 
         // Initialize RecyclerView
         recyclerView = view.findViewById(R.id.destinations_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(context)
         destinationsList = mutableListOf()
-        destinationAdapter = DestinationAdapter(destinationsList)
+        destinationAdapter = DestinationAdapter(destinationsList, false)
         recyclerView.adapter = destinationAdapter
 
         // Fetch data from Firestore

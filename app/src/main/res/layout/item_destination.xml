@@ -17,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,6 +46,26 @@
                 android:layout_marginTop="4dp"/>
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_light"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:id="@+id/delete_button_layout">
 
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_margin="0dp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.cardview.widget.CardView>
