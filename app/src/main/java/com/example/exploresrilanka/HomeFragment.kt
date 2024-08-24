@@ -31,6 +31,7 @@ class HomeFragment : Fragment() {
     private lateinit var firestore: FirebaseFirestore
     private lateinit var welcomeTextView: TextView
     private lateinit var generateItineraryButton: Button
+    private lateinit var generateAnotherItineraryButton: Button
     private lateinit var viewItineraryButton: Button
     private lateinit var regenerateItineraryButton: Button
 
@@ -50,6 +51,7 @@ class HomeFragment : Fragment() {
 
         welcomeTextView = view.findViewById(R.id.home_welcome)
         generateItineraryButton = view.findViewById(R.id.generate_itinerary_button)
+        generateAnotherItineraryButton = view.findViewById(R.id.generate_another_itinerary_button)
         regenerateItineraryButton = view.findViewById(R.id.regenerate_itinerary_button)
         viewItineraryButton = view.findViewById(R.id.view_itinerary_button)
 
@@ -66,6 +68,10 @@ class HomeFragment : Fragment() {
         checkForSavedItinerary()
 
         generateItineraryButton.setOnClickListener {
+            showItineraryDialog()
+        }
+
+        generateAnotherItineraryButton.setOnClickListener {
             showItineraryDialog()
         }
 
@@ -94,11 +100,15 @@ class HomeFragment : Fragment() {
             .get()
             .addOnSuccessListener { documents ->
                 if (documents.isEmpty) {
+                    // Show only the initial generate itinerary button
                     generateItineraryButton.visibility = View.VISIBLE
                     viewItineraryButton.visibility = View.GONE
+                    generateAnotherItineraryButton.visibility = View.GONE
                 } else {
+                    // Show view itinerary and generate another itinerary buttons
                     generateItineraryButton.visibility = View.GONE
                     viewItineraryButton.visibility = View.VISIBLE
+                    generateAnotherItineraryButton.visibility = View.VISIBLE
                 }
             }
             .addOnFailureListener { e ->
@@ -194,19 +204,21 @@ class HomeFragment : Fragment() {
         buttonsLayout?.visibility = View.VISIBLE
     }
 
-
     private fun saveItinerary() {
         val userId = user.uid
         val userEmail = user.email ?: "user@email.com"
         val userName = user.displayName ?: "User"
         val itinerary = generatedItinerary ?: return
 
+        // Get the current date and time
+        val createdAt = System.currentTimeMillis()
+
         val itineraryData = mapOf(
             "userId" to userId,
             "userEmail" to userEmail,
             "userName" to userName,
             "itinerary" to itinerary,
-            "timestamp" to System.currentTimeMillis()
+            "createdAt" to createdAt // Save created date and time
         )
 
         firestore.collection("itineraries")
@@ -216,6 +228,7 @@ class HomeFragment : Fragment() {
                 // Hide generate itinerary button and show view itinerary button
                 generateItineraryButton.visibility = View.GONE
                 viewItineraryButton.visibility = View.VISIBLE
+                generateAnotherItineraryButton.visibility = View.VISIBLE
             }
             .addOnFailureListener { e ->
                 Toast.makeText(context, "Failed to save itinerary: ${e.message}", Toast.LENGTH_SHORT).show()

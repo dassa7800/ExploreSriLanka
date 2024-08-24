@@ -57,6 +57,18 @@
             android:padding="12dp"
             android:layout_marginBottom="24dp"/>
 
+        <!-- Generate Another Itinerary Button -->
+        <Button
+            android:id="@+id/generate_another_itinerary_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate Another Itinerary"
+            android:textColor="#FFFFFF"
+            android:background="#6200EE"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone"/>
+
         <!-- View Itinerary Button -->
         <Button
             android:id="@+id/view_itinerary_button"
