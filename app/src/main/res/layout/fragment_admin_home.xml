@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Welcome Message -->
+        <TextView
+            android:id="@+id/admin_home_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, Admin!"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Admin Overview -->
+        <TextView
+            android:id="@+id/admin_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here are your latest updates and actions."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Example Action Button -->
+        <Button
+            android:id="@+id/admin_action_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Reports"
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Additional admin content can go here -->
+
+    </LinearLayout>
+</ScrollView>

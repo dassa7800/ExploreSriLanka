@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/bookings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage Bookings"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Example Content -->
+        <TextView
+            android:id="@+id/bookings_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View and manage all bookings made through the platform."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Example Action Button -->
+        <Button
+            android:id="@+id/view_bookings_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View All Bookings"
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>
