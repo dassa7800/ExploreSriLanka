@@ -6,7 +6,7 @@ import retrofit2.http.Headers
 import retrofit2.http.POST
 
 interface OpenAIApiService {
-    @Headers("Authorization: Bearer sk-svcacct-QdS9BqY1yW2ySA2K_nvh4LuIfRZJmsEiA-fRqYL6YKFBQ_LUeg7BhJpouzuC2o7dU7mcUzXYT3BlbkFJkkrdd4c5rWhMqQ8Ms20DRfCCW2CyWOpTe7RoxpwnYnJVlnkebLl5VSSosIvwx_1SstCcAG0A")
+    @Headers("Authorization: Bearer YOUR_API_KEY")
     @POST("v1/chat/completions")
     fun generateItinerary(@Body request: OpenAIRequest): Call<OpenAIResponse>
 }
