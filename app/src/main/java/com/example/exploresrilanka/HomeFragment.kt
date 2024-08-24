@@ -123,6 +123,8 @@ class HomeFragment : Fragment() {
         val daysInput = dialogView.findViewById<EditText>(R.id.days_input)
         val preferenceSpinner = dialogView.findViewById<Spinner>(R.id.preference_spinner)
         val budgetInput = dialogView.findViewById<EditText>(R.id.budget_input)
+        val peopleInput = dialogView.findViewById<EditText>(R.id.people_input)
+        val roomsInput = dialogView.findViewById<EditText>(R.id.rooms_input)
 
         val preferences = arrayOf("General", "Adventure", "Wellness")
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, preferences)
@@ -136,8 +138,10 @@ class HomeFragment : Fragment() {
                 val days = daysInput.text.toString()
                 val preference = preferenceSpinner.selectedItem.toString()
                 val budget = budgetInput.text.toString()
+                val people = peopleInput.text.toString()
+                val rooms = roomsInput.text.toString()
 
-                val prompt = buildItineraryPrompt(days, preference, budget)
+                val prompt = buildItineraryPrompt(days, preference, budget, people, rooms)
                 lastPrompt = prompt
                 generateItinerary(prompt)
 
@@ -149,8 +153,8 @@ class HomeFragment : Fragment() {
             .show()
     }
 
-    private fun buildItineraryPrompt(days: String, preference: String, budget: String): String {
-        return "Generate a ${preference.toLowerCase()} travel itinerary for a ${days}-day trip to Sri Lanka with a budget of ${budget} USD."
+    private fun buildItineraryPrompt(days: String, preference: String, budget: String, people: String, rooms: String): String {
+        return "Generate a ${preference.toLowerCase()} travel itinerary for a ${days}-day trip to Sri Lanka with a budget of ${budget} USD for ${people} people requiring ${rooms} rooms."
     }
 
     private fun generateItinerary(prompt: String) {

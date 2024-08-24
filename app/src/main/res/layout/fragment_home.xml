@@ -9,7 +9,7 @@
         android:orientation="vertical"
         android:padding="16dp"
         android:gravity="center"
-        android:background="@drawable/gradient_background"> <!-- Added gradient background -->
+        android:background="@drawable/gradient_background">
 
         <!-- Welcome Message -->
         <LinearLayout
