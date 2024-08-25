@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "675240960268",
-    "project_id": "explore-sri-lanka-2024",
-    "storage_bucket": "explore-sri-lanka-2024.appspot.com"
+    "project_number": "530878455695",
+    "project_id": "explore-sri-lanka-20240825",
+    "storage_bucket": "explore-sri-lanka-20240825.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:675240960268:android:06eedc8accc31876b16929",
+        "mobilesdk_app_id": "1:530878455695:android:047aaf425c7688800db5fa",
         "android_client_info": {
           "package_name": "com.example.exploresrilanka"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAw2vvjJUIbuc-lAP3dE1BbzO6DGtsQAw4"
+          "current_key": "AIzaSyDC38N3iEkCVk4ZfVpV4efXApECIRDgc_I"
         }
       ],
       "services": {
